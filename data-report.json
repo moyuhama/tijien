@@ -1,0 +1,18 @@
+{
+  "rawQuestions": 1294,
+  "uniqueQuestions": 887,
+  "mergedDuplicates": 407,
+  "articles": 128,
+  "dailyQuestions": 900,
+  "essentialQuestions": 394,
+  "categories": {
+    "交际用语": 161,
+    "词汇与语法": 311,
+    "汉译英": 119,
+    "英译汉": 61,
+    "虚拟语气": 235
+  },
+  "answerConflicts": [],
+  "questionSources": 31,
+  "readingSources": 8
+}

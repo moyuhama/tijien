@@ -1,0 +1,10 @@
+.DS_Store
+.openai/
+__pycache__/
+*.pyc
+*.log
+*-preview.png
+preview.png
+拾题-学习进度-*.json
+.env
+.env.*
