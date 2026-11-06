@@ -179,3 +179,6 @@ assert.ok(C.articleExcerpt(parentingArticle,'养儿育女不容易').includes('�
 assert.equal(C.articleExcerpt(parentingArticle,' '),'');
 assert.ok(C.articleExcerpt(parentingArticle,'Parenting').length<=182);
 console.log('PASS: reading full text search in English/Chinese, case/whitespace/quote normalization, multiple keywords, textbook filters, empty results and matching excerpts.');
+
+// Complete-paper learning and assessment are separate from the daily bank.
+require('./check-papers.cjs');

@@ -1,6 +1,6 @@
 (function (root) {
   'use strict';
-  const emptyProgress = () => ({ version: 1, questions: {}, days: {}, history: [], articles: {}, beginner: { lessons: {}, review: {} }, session: null });
+  const emptyProgress = () => ({ version: 1, questions: {}, days: {}, history: [], articles: {}, beginner: { lessons: {}, review: {} }, papers: { attempts: {}, activeId: null, mode: 'practice', section: 0 }, session: null });
   function normalizeSearch(value) {
     return String(value || '').normalize('NFKC').toLowerCase()
       .replace(/[‘’ʼ]/g, "'").replace(/[“”]/g, '"').replace(/\s+/g, ' ').trim();
@@ -150,6 +150,7 @@
       finishedAt: h.finishedAt, startedAt: typeof h.startedAt === 'string' ? h.startedAt : h.finishedAt
     }));
     if (root.StudyBeginner) clean.beginner = root.StudyBeginner.validState(value.beginner);
+    if (root.StudyPapersCore) clean.papers = root.StudyPapersCore.validState(value.papers);
     return clean;
   }
   const api = { emptyProgress, filterQuestions, filterArticles, articleExcerpt, shuffle, recordAnswer, dateKey, migrateQuestionIds, validProgress };
